@@ -4,6 +4,19 @@ let cartModal = document.getElementById("cart");
 let cartItemsList = document.getElementById("cart-items");
 let totalAmount = document.getElementById("total-amount");
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+
 function addToCart(productName, price) {
     cart.push({ productName, price });
     updateCart();

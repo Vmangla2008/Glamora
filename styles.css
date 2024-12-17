@@ -5,6 +5,30 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+header {
+  background: #333;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
 
 header {
     background-color: #333;
@@ -20,11 +44,33 @@ header .cart {
     top: 20px;
 }
 
-header .cart button {
+header .cart button
+ {
     background-color: #f8f8f8;
     border: 1px solid #333;
     padding: 10px;
     cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 section.products {
@@ -53,6 +99,32 @@ section.products {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+.product-card {
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.add-to-cart {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #4cae4c;
 }
 
 .product button:hover {
@@ -84,6 +156,17 @@ section.products {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul {
+    text-align: left;
+  }
+
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 
 .cart-modal button:hover {
